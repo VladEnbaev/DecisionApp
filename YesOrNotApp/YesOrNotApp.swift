@@ -8,10 +8,10 @@
 import SwiftUI
 
 @main
-struct YesOrNotAppApp: App {
+struct YesOrNotApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            DecisionView(arguments: Argument.previewArgumentsFor)
         }
     }
 }
