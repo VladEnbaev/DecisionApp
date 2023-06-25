@@ -16,11 +16,11 @@ struct ArgumentsList: View {
                 ForEach(arguments, id: \.id) { argument in
                     ArgumentView(
                         text: argument.name,
-                        backgroundColor: argument.isArgumentFor ? R.greenLight40 : R.redLight40
+                        backgroundColor: argument.isArgumentFor ? .greenBackground : .redBackground
                     )
                 }
             }
-            .background(Color.white)
+
         }
     }
 }

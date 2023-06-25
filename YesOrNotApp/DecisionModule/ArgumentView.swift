@@ -12,7 +12,6 @@ struct ArgumentView: View {
     let backgroundColor : Color
     
     var body: some View {
-        
         Text(text)
             .multilineTextAlignment(.center)
             .padding(.leading, 12)
@@ -27,6 +26,6 @@ struct ArgumentView: View {
 
 struct ArgumentView_Previews: PreviewProvider {
     static var previews: some View {
-        ArgumentView(text: "Dirty", backgroundColor: R.greenLight40)
+        ArgumentView(text: "Dirty", backgroundColor: .greenBackground)
     }
 }

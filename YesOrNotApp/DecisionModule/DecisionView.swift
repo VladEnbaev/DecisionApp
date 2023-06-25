@@ -25,13 +25,25 @@ struct DecisionView: View {
             ZStack {
                 
                 VStack {
-                    Text("Should i go to Boris's party?")
-                        .font(.system(size: 20))
-                        .fontWeight(.medium)
-                        .padding(.top, 10)
-                    HStack(spacing: 0) {
+                    HStack {
+                        Button(action: {}) {
+                            R.Images.plusImage
+                                .foregroundColor(.greenPrimary)
+                        }
+                        Text("Should I go to Boris's party?")
+                            .font(.system(size: 20))
+                            .fontWeight(.medium)
+                            .padding(.trailing, 15)
+                            .padding(.leading, 15)
+                        Button(action: {}) {
+                            R.Images.plusImage
+                                .foregroundColor(.redPrimary)
+                        }
+                    }
+                    .padding(.top, 10)
+                    Divider()
+                    HStack(spacing: 20) {
                         ArgumentsList(arguments: argumentsFor)
-                            .padding(.trailing, 16)
                         ArgumentsList(arguments: argumentsAgainst)
                     }
                     .padding(.top, 12)

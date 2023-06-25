@@ -15,6 +15,7 @@
 		FFBEF7912A47090500D55E72 /* Resources.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFBEF7902A47090500D55E72 /* Resources.swift */; };
 		FFBEF7952A470CE200D55E72 /* ArgumentsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFBEF7942A470CE200D55E72 /* ArgumentsList.swift */; };
 		FFBEF79B2A47126F00D55E72 /* ArgumentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFBEF79A2A47126F00D55E72 /* ArgumentModel.swift */; };
+		FFBEF79E2A48D42100D55E72 /* Color+ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFBEF79D2A48D42100D55E72 /* Color+ext.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		FFBEF7902A47090500D55E72 /* Resources.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resources.swift; sourceTree = "<group>"; };
 		FFBEF7942A470CE200D55E72 /* ArgumentsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArgumentsList.swift; sourceTree = "<group>"; };
 		FFBEF79A2A47126F00D55E72 /* ArgumentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArgumentModel.swift; sourceTree = "<group>"; };
+		FFBEF79D2A48D42100D55E72 /* Color+ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+ext.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 		FFBEF78F2A4708F100D55E72 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				FFBEF79C2A48D40300D55E72 /* Extensions */,
 				FFBEF7902A47090500D55E72 /* Resources.swift */,
 			);
 			path = Helpers;
@@ -101,6 +104,14 @@
 				FFBEF79A2A47126F00D55E72 /* ArgumentModel.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		FFBEF79C2A48D40300D55E72 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				FFBEF79D2A48D42100D55E72 /* Color+ext.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -178,6 +189,7 @@
 				FFBEF7912A47090500D55E72 /* Resources.swift in Sources */,
 				FFBEF77D2A46F3E300D55E72 /* YesOrNotApp.swift in Sources */,
 				FFBEF7952A470CE200D55E72 /* ArgumentsList.swift in Sources */,
+				FFBEF79E2A48D42100D55E72 /* Color+ext.swift in Sources */,
 				FFBEF78E2A47053700D55E72 /* ArgumentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
