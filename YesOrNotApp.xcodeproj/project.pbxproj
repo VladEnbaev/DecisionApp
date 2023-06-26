@@ -20,6 +20,7 @@
 		FFBEF7A42A49C56400D55E72 /* TopNavActionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFBEF7A32A49C56400D55E72 /* TopNavActionView.swift */; };
 		FFBEF7A62A49CFCA00D55E72 /* OffsetObservingScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFBEF7A52A49CFCA00D55E72 /* OffsetObservingScrollView.swift */; };
 		FFCC13512A4A10AC00BF0A98 /* View+ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFCC13502A4A10AC00BF0A98 /* View+ext.swift */; };
+		FFCC13532A4A21EB00BF0A98 /* ProgressCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFCC13522A4A21EB00BF0A98 /* ProgressCircle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 		FFBEF7A32A49C56400D55E72 /* TopNavActionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopNavActionView.swift; sourceTree = "<group>"; };
 		FFBEF7A52A49CFCA00D55E72 /* OffsetObservingScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OffsetObservingScrollView.swift; sourceTree = "<group>"; };
 		FFCC13502A4A10AC00BF0A98 /* View+ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+ext.swift"; sourceTree = "<group>"; };
+		FFCC13522A4A21EB00BF0A98 /* ProgressCircle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressCircle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +91,7 @@
 		FFBEF78F2A4708F100D55E72 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				FFCC13542A4A3E7D00BF0A98 /* Modifiers */,
 				FFBEF79C2A48D40300D55E72 /* Extensions */,
 				FFBEF7902A47090500D55E72 /* Resources.swift */,
 			);
@@ -101,10 +104,8 @@
 				FFBEF7992A47125E00D55E72 /* Model */,
 				FFBEF77E2A46F3E300D55E72 /* DecisionView.swift */,
 				FFBEF7942A470CE200D55E72 /* ArgumentsList.swift */,
-				FFBEF7A32A49C56400D55E72 /* TopNavActionView.swift */,
 				FFBEF78D2A47053700D55E72 /* ArgumentView.swift */,
-				FFBEF7A12A49C10A00D55E72 /* PlusButton.swift */,
-				FFBEF7A52A49CFCA00D55E72 /* OffsetObservingScrollView.swift */,
+				FFCC13552A4A3E9900BF0A98 /* NavigationBar */,
 			);
 			path = DecisionModule;
 			sourceTree = "<group>";
@@ -124,6 +125,24 @@
 				FFCC13502A4A10AC00BF0A98 /* View+ext.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		FFCC13542A4A3E7D00BF0A98 /* Modifiers */ = {
+			isa = PBXGroup;
+			children = (
+				FFBEF7A52A49CFCA00D55E72 /* OffsetObservingScrollView.swift */,
+			);
+			path = Modifiers;
+			sourceTree = "<group>";
+		};
+		FFCC13552A4A3E9900BF0A98 /* NavigationBar */ = {
+			isa = PBXGroup;
+			children = (
+				FFBEF7A12A49C10A00D55E72 /* PlusButton.swift */,
+				FFBEF7A32A49C56400D55E72 /* TopNavActionView.swift */,
+				FFCC13522A4A21EB00BF0A98 /* ProgressCircle.swift */,
+			);
+			path = NavigationBar;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -206,6 +225,7 @@
 				FFBEF7952A470CE200D55E72 /* ArgumentsList.swift in Sources */,
 				FFBEF79E2A48D42100D55E72 /* Color+ext.swift in Sources */,
 				FFBEF7A62A49CFCA00D55E72 /* OffsetObservingScrollView.swift in Sources */,
+				FFCC13532A4A21EB00BF0A98 /* ProgressCircle.swift in Sources */,
 				FFBEF78E2A47053700D55E72 /* ArgumentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

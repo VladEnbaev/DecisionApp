@@ -30,7 +30,9 @@ struct DecisionView: View {
                     VStack {
                         HStack(spacing: 0) {
                             ArgumentsList(arguments: argumentsFor)
+                                .padding(.leading, 10)
                             ArgumentsList(arguments: argumentsAgainst)
+                                .padding(.trailing, 10)
                         }
                         .padding(.top, 70)
                     }
@@ -42,8 +44,15 @@ struct DecisionView: View {
                 }
             }
             .navigationBarTitleDisplayMode(.automatic)
-            .navigationTitle("Make a decision. \(scrollOffset.y)")
-            .navigationBarBackgroundColor(color: UIColor(cgColor: Color.background.cgColor ?? UIColor.black.cgColor))
+            .navigationTitle("Make a decision.")
+            .navigationBarBackgroundColor(color:Color.navigationBackground)
+            .navigationBarItems(
+                trailing: 
+                    ProgressCircle(
+                        yesPercent: Double(argumentsFor.count) / Double(arguments.count) * 100,
+                        size: 30
+                    )
+            )
         }
     }
 }

@@ -26,7 +26,7 @@ struct TopNavActionView: View {
             Divider()
         }
         .frame(width: UIScreen.main.bounds.width, height: height)
-        .background(Color.background)
+        .background(.background)
     }
 }
 
