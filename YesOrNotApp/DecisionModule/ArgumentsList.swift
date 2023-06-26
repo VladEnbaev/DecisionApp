@@ -12,16 +12,25 @@ struct ArgumentsList: View {
     
     var body: some View {
         ScrollView(.vertical) {
-            VStack {
-                ForEach(arguments, id: \.id) { argument in
+            LazyVStack {
+                ForEach(0..<arguments.count) { index in
                     ArgumentView(
-                        text: argument.name,
-                        backgroundColor: argument.isArgumentFor ? .greenBackground : .redBackground
+                        text: arguments[index].name,
+                        backgroundColor: arguments[index].isArgumentFor ? .greenBackground : .redBackground
                     )
                 }
             }
-
         }
+        .padding(EdgeInsets())
+//        .gesture(
+//           DragGesture().onChanged { value in
+//              if value.translation.height > 0 {
+//                 print("Scroll down")
+//              } else {
+//                 print("Scroll up")
+//              }
+//           }
+//        )
     }
 }
 

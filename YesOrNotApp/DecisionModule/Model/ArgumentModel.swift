@@ -31,6 +31,6 @@ struct Argument : Identifiable {
                                     isArgumentFor: false,
                                     name: "Long drive")
         
-        return [argumentFor1, argumentFor2, argumentFor3, argumentAbout1, argumentAbout2]
+        return [argumentFor1, argumentFor2, argumentFor3, argumentAbout1, argumentAbout2, argumentFor3, argumentFor3, argumentFor3, argumentFor3]
     }
 }

@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct DecisionView: View {
+    @State private var scrollOffset : CGPoint = CGPoint()
+    @State private var secondScrollOffset : CGPoint = CGPoint()
+    
     let arguments  : [Argument]
     
     private var argumentsFor : [Argument] {
@@ -22,41 +25,32 @@ struct DecisionView: View {
     
     var body: some View {
         NavigationView() {
-            ZStack {
-                
-                VStack {
-                    HStack {
-                        Button(action: {}) {
-                            R.Images.plusImage
-                                .foregroundColor(.greenPrimary)
+            OffsetObservingScrollView(offset: $scrollOffset) {
+                ZStack {
+                    VStack {
+                        HStack(spacing: 0) {
+                            ArgumentsList(arguments: argumentsFor)
+                            ArgumentsList(arguments: argumentsAgainst)
                         }
-                        Text("Should I go to Boris's party?")
-                            .font(.system(size: 20))
-                            .fontWeight(.medium)
-                            .padding(.trailing, 15)
-                            .padding(.leading, 15)
-                        Button(action: {}) {
-                            R.Images.plusImage
-                                .foregroundColor(.redPrimary)
-                        }
+                        .padding(.top, 70)
                     }
-                    .padding(.top, 10)
-                    Divider()
-                    HStack(spacing: 20) {
-                        ArgumentsList(arguments: argumentsFor)
-                        ArgumentsList(arguments: argumentsAgainst)
+                    VStack {
+                        TopNavActionView(height: 50)
+                            .padding(.top, max(0, scrollOffset.y))
+                        Spacer()
                     }
-                    .padding(.top, 12)
                 }
-                .navigationTitle("Make a decision.")
             }
+            .navigationBarTitleDisplayMode(.automatic)
+            .navigationTitle("Make a decision. \(scrollOffset.y)")
+            .navigationBarBackgroundColor(color: UIColor(cgColor: Color.background.cgColor ?? UIColor.black.cgColor))
         }
-        
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct DecisionView_Preview: PreviewProvider {
     static var previews: some View {
         DecisionView(arguments: Argument.previewArgumentsFor)
     }
 }
+
