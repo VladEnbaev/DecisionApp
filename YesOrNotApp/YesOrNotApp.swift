@@ -11,7 +11,7 @@ import SwiftUI
 struct YesOrNotApp: App {
     var body: some Scene {
         WindowGroup {
-            DecisionView(arguments: Argument.previewArgumentsFor)
+            ArgumentsView(arguments: Argument.previewArguments)
         }
     }
 }

@@ -14,4 +14,5 @@ extension Color {
     static let redPrimary = Color.red
     static let greenPrimary = Color.green
     static let navigationBackground = UIColor.systemBackground.withAlphaComponent(0.8)
+    static let backgroundColor = Color("backgroundColor")
 }

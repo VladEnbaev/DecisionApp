@@ -9,7 +9,15 @@ import SwiftUI
 
 struct ArgumentView: View {
     let text : String
-    let backgroundColor : Color
+    let isArgumentFor : Bool
+    
+    private var backgroundColor: Color {
+        isArgumentFor ? .greenBackground : .redBackground
+    }
+    
+    private var strokeColor: Color {
+        isArgumentFor ? .greenPrimary : .redPrimary
+    }
     
     var body: some View {
         Text(text)
@@ -21,11 +29,16 @@ struct ArgumentView: View {
             .frame(width: 170, alignment: .center)
             .background(backgroundColor)
             .cornerRadius(20)
+            .overlay(
+                RoundedRectangle(cornerRadius: 20)
+                    .inset(by: 0.5)
+                    .stroke(strokeColor, lineWidth: 1)
+            )
     }
 }
 
 struct ArgumentView_Previews: PreviewProvider {
     static var previews: some View {
-        ArgumentView(text: "Dirty", backgroundColor: .greenBackground)
+        ArgumentView(text: "Dirty", isArgumentFor: true)
     }
 }
