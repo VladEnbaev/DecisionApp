@@ -14,7 +14,7 @@ struct Argument : Identifiable {
     let name: String
     
     
-    static var previewArguments : [Argument] {
+    static var previewMocArguments : [Argument] {
         let argumentFor1 = Argument(
                                  isArgumentFor: true,
                                  name: "I'll rest and have fun")

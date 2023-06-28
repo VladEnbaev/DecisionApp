@@ -14,7 +14,7 @@ struct ArgumentsList: View {
         ScrollView(.vertical) {
             LazyVStack(spacing: 20) {
                 ForEach(arguments, id: \.id) { argument in
-                    ArgumentView(
+                    ArgumentCellView(
                         text: argument.name,
                         isArgumentFor: argument.isArgumentFor
                     )
@@ -36,6 +36,6 @@ struct ArgumentsList: View {
 
 struct ArgumentList_Previews: PreviewProvider {
     static var previews: some View {
-        ArgumentsList(arguments: Argument.previewArguments)
+        ArgumentsList(arguments: Argument.previewMocArguments)
     }
 }

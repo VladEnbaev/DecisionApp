@@ -27,43 +27,43 @@ struct ArgumentsView: View {
         ZStack {
             Color.backgroundColor
                 .ignoresSafeArea()
-            NavigationView() {
-                OffsetObservingScrollView(offset: $scrollOffset) {
-                    ZStack {
-                        VStack {
-                            HStack(spacing: 0) {
-                                ArgumentsList(arguments: argumentsFor)
-                                    .padding(.leading, 10)
-                                ArgumentsList(arguments: argumentsAgainst)
-                                    .padding(.trailing, 10)
-                            }
-                            .padding(.top, 70)
+            
+            OffsetObservingScrollView(offset: $scrollOffset) {
+                ZStack {
+                    VStack {
+                        HStack(spacing: 0) {
+                            ArgumentsList(arguments: argumentsFor)
+                                .padding(.leading, 10)
+                            ArgumentsList(arguments: argumentsAgainst)
+                                .padding(.trailing, 10)
                         }
-                        VStack {
-                            TopNavActionView(height: 50)
-                                .padding(.top, max(0, scrollOffset.y))
-                            Spacer()
-                        }
+                        .padding(.top, 70)
+                    }
+                    VStack {
+                        TopNavActionView(height: 50)
+                            .padding(.top, max(0, scrollOffset.y))
+                        Spacer()
                     }
                 }
-                .navigationBarTitleDisplayMode(.automatic)
-                .navigationTitle("Make a decision.")
-                .navigationBarBackgroundColor(color:Color.navigationBackground)
-                .navigationBarItems(
-                    trailing:
-                        ProgressCircle(
-                            yesPercent: Double(argumentsFor.count) / Double(arguments.count) * 100,
-                            size: 30
-                        )
-                )
             }
+            .navigationBarTitleDisplayMode(.automatic)
+            .navigationTitle("Make a decision.")
+            .navigationBarBackgroundColor(color: Color.navigationBackground)
+            .navigationBarItems(
+                trailing:
+                    ProgressCircle(
+                        yesPercent: Double(argumentsFor.count) / Double(arguments.count) * 100,
+                        size: 30
+                    )
+            )
         }
+        
     }
 }
 
 struct ArgumentsView_Preview: PreviewProvider {
     static var previews: some View {
-        ArgumentsView(arguments: Argument.previewArguments)
+        ArgumentsView(arguments: Argument.previewMocArguments)
     }
 }
 
