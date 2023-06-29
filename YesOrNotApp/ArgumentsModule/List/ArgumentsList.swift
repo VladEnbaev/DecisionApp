@@ -22,15 +22,6 @@ struct ArgumentsList: View {
             }
         }
         .padding(EdgeInsets(.zero))
-        //        .gesture(
-        //           DragGesture().onChanged { value in
-        //              if value.translation.height > 0 {
-        //                 print("Scroll down")
-        //              } else {
-        //                 print("Scroll up")
-        //              }
-        //           }
-        //        )
     }
 }
 

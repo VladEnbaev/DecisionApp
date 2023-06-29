@@ -48,7 +48,6 @@ struct ArgumentsView: View {
             }
             .navigationBarTitleDisplayMode(.automatic)
             .navigationTitle("Make a decision.")
-            .navigationBarBackgroundColor(color: Color.navigationBackground)
             .navigationBarItems(
                 trailing:
                     ProgressCircle(

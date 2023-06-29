@@ -5,7 +5,6 @@
 //  Created by Влад Енбаев on 25.06.2023.
 //
 
-import Foundation
 import SwiftUI
 
 extension Color {
@@ -13,6 +12,9 @@ extension Color {
     static let greenBackground = Color("greenBackground")
     static let redPrimary = Color.red
     static let greenPrimary = Color.green
-    static let navigationBackground = UIColor.systemBackground.withAlphaComponent(0.8)
     static let backgroundColor = Color("backgroundColor")
+    static let textColor = Color("textColor")
+    
+    static let greenStroke = Color("greenStroke")
+    static let redStroke = Color("redStroke")
 }

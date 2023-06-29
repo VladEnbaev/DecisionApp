@@ -14,19 +14,20 @@ struct TopNavActionView: View {
         VStack {
             Spacer()
             HStack {
-                PlusButton(color: .greenPrimary, action: {})
+                PlusButton(foregroundColor: .greenStroke, action: {})
                 Text("Should I go to Boris's party?")
+                    .foregroundColor(.textColor)
                     .font(.system(size: 18))
                     .fontWeight(.medium)
                     .padding(.trailing, 20)
                     .padding(.leading, 20)
-                PlusButton(color: .redPrimary, action: {})
+                PlusButton(foregroundColor: .redStroke, action: {})
             }
             Spacer()
             Divider()
         }
+        .background(Color(UIColor.navigationBackground))
         .frame(width: UIScreen.main.bounds.width, height: height)
-        .background(.background)
     }
 }
 

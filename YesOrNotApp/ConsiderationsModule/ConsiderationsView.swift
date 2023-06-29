@@ -13,26 +13,35 @@ struct ConsiderationsView: View {
     
     var body: some View {
         NavigationView {
-            List {
-                ForEach(considerations, id: \.id) { consideration in
-                    NavigationLink(
-                        destination: {
-                            ArgumentsView(arguments: consideration.arguments)
-                        }, label: {
-                            ConsiderationCellView(
-                                yesPercent: consideration.yesPercent,
-                                name: consideration.title,
-                                date: consideration.date
+            ZStack {
+                ScrollView {
+                    LazyVStack(spacing: 0) {
+                        ForEach(considerations, id: \.id) { consideration in
+                            NavigationLink(
+                                destination: {
+                                    ArgumentsView(arguments: consideration.arguments)
+                                }, label: {
+                                    ConsiderationCellView(
+                                        yesPercent: consideration.yesPercent,
+                                        name: consideration.title
+                                    )
+                                }
                             )
                         }
-                    )
+                        .padding(.top, 10)
+                        .padding(.bottom, 0)
+                    }
                 }
-                .padding(.top, 10)
+                
+                VStack {
+                    Spacer()
+                    ConsiderationNewButton()
+                        .padding(.bottom, 50)
+                }
             }
-            .listStyle(.insetGrouped)
+            .background(Color.backgroundColor)
             .navigationTitle("Your Considerations")
-            .toolbarBackground(.visible, for: .navigationBar)
-            .navigationBarHideDivider()
+            .navigationBarBackgroundColor(color: UIColor.navigationBackground)
         }
     }
 }
