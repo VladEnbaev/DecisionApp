@@ -11,14 +11,14 @@ import SwiftUI
 struct PlusButton: View {
     let foregroundColor: Color
     let action: () -> Void
-    @State private var isTapped = false
+    @State private var isPressed = false
     
     private var backgroundColor : Color {
-        isTapped ? foregroundColor.opacity(0.2) : .white
+        isPressed ? foregroundColor.opacity(0.2) : .white
     }
     
     var body: some View {
-        R.Images.plusImage
+        R.Icons.plus
             .frame(width: 12, height: 12, alignment: .center)
             .foregroundColor(foregroundColor)
             .padding(6)
@@ -30,15 +30,10 @@ struct PlusButton: View {
                     .stroke(foregroundColor,
                             lineWidth: 2)
             )
-            .onTapGesture {
-                withAnimation(.linear.speed(3)) {
-                    isTapped.toggle()
-                }
+            .scaleEffect(isPressed ? 1.3 : 1)
+            .onTapGesture(action: {
                 action()
-                withAnimation(.linear.speed(3).delay(0.1)) {
-                    isTapped.toggle()
-                }
-            }
+            }, isPressed: $isPressed)
     }
 }
 

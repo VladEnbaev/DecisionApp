@@ -31,7 +31,7 @@ struct ArgumentsView: View {
             OffsetObservingScrollView(offset: $scrollOffset) {
                 ZStack {
                     VStack {
-                        HStack(spacing: 0) {
+                        HStack(spacing: 10) {
                             ArgumentsList(arguments: argumentsFor)
                                 .padding(.leading, 10)
                             ArgumentsList(arguments: argumentsAgainst)
@@ -46,6 +46,7 @@ struct ArgumentsView: View {
                     }
                 }
             }
+            .frame(maxWidth: .infinity, maxHeight: .infinity)
             .navigationBarTitleDisplayMode(.automatic)
             .navigationTitle("Make a decision.")
             .navigationBarItems(

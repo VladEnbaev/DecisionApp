@@ -10,6 +10,7 @@ import SwiftUI
 struct ArgumentCellView: View {
     let text : String
     let isArgumentFor : Bool
+    @State var isPressed : Bool = false
     
     private var backgroundColor: Color {
         isArgumentFor ? .greenBackground : .redBackground
@@ -20,23 +21,30 @@ struct ArgumentCellView: View {
     }
     
     var body: some View {
-        Text(text)
-            .padding(.leading, 12)
-            .padding(.trailing, 12)
-            .padding(.top, 25)
-            .padding(.bottom, 25)
-            .frame(width: 180)
-            .background(
-                isArgumentFor ? Color.greenBackground : Color.redBackground
-            )
-            .cornerRadius(12)
-            .overlay(
-                RoundedRectangle(cornerRadius: 12)
-                    .inset(by: 1.5)
-                    .stroke(
-                        isArgumentFor ? Color.greenStroke : Color.redStroke,
-                        lineWidth: 3)
-            )
+        HStack {
+            Spacer()
+            Text(text)
+                .padding(.top, 25)
+                .padding(.bottom, 25)
+            Spacer()
+                
+        }
+        .background(
+            isArgumentFor ? Color.greenBackground : Color.redBackground
+        )
+        .cornerRadius(12)
+        .overlay(
+            RoundedRectangle(cornerRadius: 12)
+                .inset(by: 1.5)
+                .stroke(
+                    isArgumentFor ? Color.greenStroke : Color.redStroke,
+                    lineWidth: 3)
+        )
+        .padding(.horizontal, 10)
+        .scaleEffect(isPressed ? 1.05 : 1)
+        .addTapGesture(action: {
+            print("YEEEEIIIII")
+        }, isPressed: $isPressed)
     }
 }
 

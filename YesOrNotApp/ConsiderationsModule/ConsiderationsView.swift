@@ -14,34 +14,37 @@ struct ConsiderationsView: View {
     var body: some View {
         NavigationView {
             ZStack {
-                ScrollView {
-                    LazyVStack(spacing: 0) {
-                        ForEach(considerations, id: \.id) { consideration in
-                            NavigationLink(
-                                destination: {
-                                    ArgumentsView(arguments: consideration.arguments)
-                                }, label: {
-                                    ConsiderationCellView(
-                                        yesPercent: consideration.yesPercent,
-                                        name: consideration.title
-                                    )
-                                }
-                            )
+                VStack(spacing: 0) {
+                    ScrollView {
+                        Divider()
+                        LazyVStack(spacing: 0) {
+                            ForEach(considerations, id: \.id) { consideration in
+                                NavigationLink(
+                                    destination: {
+                                        ArgumentsView(arguments: consideration.arguments)
+                                    }, label: {
+                                        ConsiderationCellView(
+                                            yesPercent: consideration.yesPercent,
+                                            name: consideration.title
+                                        )
+                                    }
+                                )
+                            }
+                            .padding(.top, 10)
                         }
-                        .padding(.top, 10)
-                        .padding(.bottom, 0)
                     }
                 }
                 
                 VStack {
                     Spacer()
-                    ConsiderationNewButton()
+                    ConsiderationNewButton(action: { })
                         .padding(.bottom, 50)
                 }
             }
             .background(Color.backgroundColor)
             .navigationTitle("Your Considerations")
             .navigationBarBackgroundColor(color: UIColor.navigationBackground)
+            .navigationBarItems(leading: R.Icons.sliders, trailing: R.Icons.grid)
         }
     }
 }

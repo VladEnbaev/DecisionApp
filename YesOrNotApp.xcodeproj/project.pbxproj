@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		FF9DB71B2A4CCD5D0005108E /* UIColor+ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF9DB71A2A4CCD5D0005108E /* UIColor+ext.swift */; };
 		FF9DB71D2A4CCF200005108E /* ConsiderationNewButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF9DB71C2A4CCF200005108E /* ConsiderationNewButton.swift */; };
+		FF9DB71F2A4F3F230005108E /* ButtonModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF9DB71E2A4F3F230005108E /* ButtonModifiers.swift */; };
 		FFBEF77D2A46F3E300D55E72 /* YesOrNotApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFBEF77C2A46F3E300D55E72 /* YesOrNotApp.swift */; };
 		FFBEF77F2A46F3E300D55E72 /* ArgumentsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFBEF77E2A46F3E300D55E72 /* ArgumentsView.swift */; };
 		FFBEF7812A46F3E500D55E72 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FFBEF7802A46F3E500D55E72 /* Assets.xcassets */; };
@@ -20,7 +21,7 @@
 		FFBEF79E2A48D42100D55E72 /* Color+ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFBEF79D2A48D42100D55E72 /* Color+ext.swift */; };
 		FFBEF7A22A49C10A00D55E72 /* PlusButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFBEF7A12A49C10A00D55E72 /* PlusButton.swift */; };
 		FFBEF7A42A49C56400D55E72 /* TopNavActionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFBEF7A32A49C56400D55E72 /* TopNavActionView.swift */; };
-		FFBEF7A62A49CFCA00D55E72 /* OffsetObservingScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFBEF7A52A49CFCA00D55E72 /* OffsetObservingScrollView.swift */; };
+		FFBEF7A62A49CFCA00D55E72 /* ScrollViewModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFBEF7A52A49CFCA00D55E72 /* ScrollViewModifiers.swift */; };
 		FFCC13512A4A10AC00BF0A98 /* View+ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFCC13502A4A10AC00BF0A98 /* View+ext.swift */; };
 		FFCC13532A4A21EB00BF0A98 /* ProgressCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFCC13522A4A21EB00BF0A98 /* ProgressCircle.swift */; };
 		FFCC13582A4B358300BF0A98 /* ConsiderationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFCC13572A4B358300BF0A98 /* ConsiderationsView.swift */; };
@@ -32,6 +33,7 @@
 /* Begin PBXFileReference section */
 		FF9DB71A2A4CCD5D0005108E /* UIColor+ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+ext.swift"; sourceTree = "<group>"; };
 		FF9DB71C2A4CCF200005108E /* ConsiderationNewButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsiderationNewButton.swift; sourceTree = "<group>"; };
+		FF9DB71E2A4F3F230005108E /* ButtonModifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonModifiers.swift; sourceTree = "<group>"; };
 		FFBEF7792A46F3E300D55E72 /* YesOrNotApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YesOrNotApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFBEF77C2A46F3E300D55E72 /* YesOrNotApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YesOrNotApp.swift; sourceTree = "<group>"; };
 		FFBEF77E2A46F3E300D55E72 /* ArgumentsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArgumentsView.swift; sourceTree = "<group>"; };
@@ -44,7 +46,7 @@
 		FFBEF79D2A48D42100D55E72 /* Color+ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+ext.swift"; sourceTree = "<group>"; };
 		FFBEF7A12A49C10A00D55E72 /* PlusButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlusButton.swift; sourceTree = "<group>"; };
 		FFBEF7A32A49C56400D55E72 /* TopNavActionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopNavActionView.swift; sourceTree = "<group>"; };
-		FFBEF7A52A49CFCA00D55E72 /* OffsetObservingScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OffsetObservingScrollView.swift; sourceTree = "<group>"; };
+		FFBEF7A52A49CFCA00D55E72 /* ScrollViewModifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollViewModifiers.swift; sourceTree = "<group>"; };
 		FFCC13502A4A10AC00BF0A98 /* View+ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+ext.swift"; sourceTree = "<group>"; };
 		FFCC13522A4A21EB00BF0A98 /* ProgressCircle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressCircle.swift; sourceTree = "<group>"; };
 		FFCC13572A4B358300BF0A98 /* ConsiderationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsiderationsView.swift; sourceTree = "<group>"; };
@@ -115,8 +117,8 @@
 			isa = PBXGroup;
 			children = (
 				FFBEF77E2A46F3E300D55E72 /* ArgumentsView.swift */,
-				FFCC13552A4A3E9900BF0A98 /* NavigationBar */,
 				FFCC135C2A4B35CF00BF0A98 /* List */,
+				FFCC13552A4A3E9900BF0A98 /* NavigationBar */,
 				FFBEF7992A47125E00D55E72 /* Model */,
 			);
 			path = ArgumentsModule;
@@ -143,7 +145,8 @@
 		FFCC13542A4A3E7D00BF0A98 /* Modifiers */ = {
 			isa = PBXGroup;
 			children = (
-				FFBEF7A52A49CFCA00D55E72 /* OffsetObservingScrollView.swift */,
+				FFBEF7A52A49CFCA00D55E72 /* ScrollViewModifiers.swift */,
+				FF9DB71E2A4F3F230005108E /* ButtonModifiers.swift */,
 			);
 			path = Modifiers;
 			sourceTree = "<group>";
@@ -264,13 +267,14 @@
 				FFBEF77F2A46F3E300D55E72 /* ArgumentsView.swift in Sources */,
 				FFBEF7912A47090500D55E72 /* Resources.swift in Sources */,
 				FFCC135A2A4B35A500BF0A98 /* Consideration.swift in Sources */,
+				FF9DB71F2A4F3F230005108E /* ButtonModifiers.swift in Sources */,
 				FFCC13512A4A10AC00BF0A98 /* View+ext.swift in Sources */,
 				FFBEF7A22A49C10A00D55E72 /* PlusButton.swift in Sources */,
 				FFBEF77D2A46F3E300D55E72 /* YesOrNotApp.swift in Sources */,
 				FFBEF7952A470CE200D55E72 /* ArgumentsList.swift in Sources */,
 				FFCC13602A4B3BD500BF0A98 /* ProgressLine.swift in Sources */,
 				FFBEF79E2A48D42100D55E72 /* Color+ext.swift in Sources */,
-				FFBEF7A62A49CFCA00D55E72 /* OffsetObservingScrollView.swift in Sources */,
+				FFBEF7A62A49CFCA00D55E72 /* ScrollViewModifiers.swift in Sources */,
 				FFCC13532A4A21EB00BF0A98 /* ProgressCircle.swift in Sources */,
 				FFCC13582A4B358300BF0A98 /* ConsiderationsView.swift in Sources */,
 				FFBEF78E2A47053700D55E72 /* ArgumentCellView.swift in Sources */,

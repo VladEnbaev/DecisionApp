@@ -26,8 +26,6 @@ struct ConsiderationCellView: View {
                 
                 ProgressLine(yesPercent: yesPercent)
                     .frame(width: 150)
-                
-                
             }
             .padding(.leading, 20)
             Spacer()
