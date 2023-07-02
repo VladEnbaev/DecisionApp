@@ -15,21 +15,22 @@ struct PositionObservingView<Content: View>: View {
     var body: some View {
         content()
             .background(GeometryReader { geometry in
-                Color.clear.preference(
-                    key: PreferenceKey.self,
-                    value: geometry.frame(in: coordinateSpace).origin
-                )
+                Color.clear
+                    .preference(
+                        key: ScrollViewPreferenceKey.self,
+                        value: geometry.frame(in: coordinateSpace).origin
+                    )
             })
-            .onPreferenceChange(PreferenceKey.self) { position in
+            .onPreferenceChange(ScrollViewPreferenceKey.self) { position in
                 self.position = position
             }
     }
 }
 
 private extension PositionObservingView {
-    struct PreferenceKey: SwiftUI.PreferenceKey {
+    struct ScrollViewPreferenceKey: PreferenceKey {
         static var defaultValue: CGPoint { .zero }
-
+        
         static func reduce(value: inout CGPoint, nextValue: () -> CGPoint) {
             // No-op
         }
@@ -52,15 +53,7 @@ struct OffsetObservingScrollView<Content: View>: View {
         ScrollView(axes, showsIndicators: showsIndicators) {
             PositionObservingView(
                 coordinateSpace: .named(coordinateSpaceName),
-                position: Binding(
-                    get: { offset },
-                    set: { newOffset in
-                        offset = CGPoint(
-                            x: -newOffset.x,
-                            y: -newOffset.y
-                        )
-                    }
-                ),
+                position: $offset,
                 content: content
             )
         }

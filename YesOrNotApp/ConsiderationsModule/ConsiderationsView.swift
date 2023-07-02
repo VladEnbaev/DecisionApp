@@ -10,6 +10,8 @@ import SwiftUI
 struct ConsiderationsView: View {
     
     let considerations: [Consideration]
+    @State var isPressed = false
+    
     
     var body: some View {
         NavigationView {
@@ -25,10 +27,15 @@ struct ConsiderationsView: View {
                                     }, label: {
                                         ConsiderationCellView(
                                             yesPercent: consideration.yesPercent,
-                                            name: consideration.title
+                                            name: consideration.title,
+                                            isPressed: $isPressed
                                         )
                                     }
                                 )
+                                .animation(nil, value: isPressed)
+                                .onTapGesture(action: {
+                                     //code
+                                }, isPressed: $isPressed)
                             }
                             .padding(.top, 10)
                         }

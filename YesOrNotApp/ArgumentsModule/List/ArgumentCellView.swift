@@ -12,12 +12,22 @@ struct ArgumentCellView: View {
     let isArgumentFor : Bool
     @State var isPressed : Bool = false
     
-    private var backgroundColor: Color {
-        isArgumentFor ? .greenBackground : .redBackground
+    private var strokeColor: Color {
+        isArgumentFor ? .greenStroke : .redStroke
     }
     
-    private var strokeColor: Color {
-        isArgumentFor ? .greenPrimary : .redPrimary
+    private var backgroundColor: Color {
+        if isPressed {
+            return strokeColor.opacity(0.3)
+        } else {
+            return isArgumentFor ? .greenBackground : .redBackground
+        }
+    }
+    
+    init(text: String, isArgumentFor: Bool) {
+        self.text = text
+        self.isArgumentFor = isArgumentFor
+        print("NEW View!!!!!!")
     }
     
     var body: some View {
@@ -29,27 +39,24 @@ struct ArgumentCellView: View {
             Spacer()
                 
         }
-        .background(
-            isArgumentFor ? Color.greenBackground : Color.redBackground
-        )
+        .background(backgroundColor)
         .cornerRadius(12)
         .overlay(
             RoundedRectangle(cornerRadius: 12)
                 .inset(by: 1.5)
-                .stroke(
-                    isArgumentFor ? Color.greenStroke : Color.redStroke,
-                    lineWidth: 3)
+                .stroke(strokeColor, lineWidth: 3)
+                .addTapGesture(action: {
+                    print("YEEEEIIIII")
+                }, isPressed: $isPressed)
         )
         .padding(.horizontal, 10)
-        .scaleEffect(isPressed ? 1.05 : 1)
-        .addTapGesture(action: {
-            print("YEEEEIIIII")
-        }, isPressed: $isPressed)
+        .scaleEffect(isPressed ? 0.95 : 1)
+        
     }
 }
 
 struct ArgumentView_Previews: PreviewProvider {
     static var previews: some View {
-        ArgumentCellView(text: "Dirty", isArgumentFor: true)
+        ArgumentCellView(text: "", isArgumentFor: true)
     }
 }

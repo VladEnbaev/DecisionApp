@@ -22,7 +22,7 @@ struct ConsiderationNewButton: View {
             )
             .cornerRadius(16)
             .frame(width: 56, height: 56)
-            .scaleEffect(isPressed ? 1.3 : 1)
+            .scaleEffect(isPressed ? 0.95 : 1)
 //            .shadow(
 //                color: Color(red: 0.05, green: 0.05, blue: 0.06),
 //                radius: 0,

@@ -84,7 +84,6 @@ struct TouchesHandler: UIViewRepresentable {
     class Coordinator {
         @objc
         func action(_ sender: Any?) {
-            action()
         }
 
         func makeGesture(didBegin: (()->Void)?, didEnd: (()->Void)?) -> MyTapGesture {
@@ -107,7 +106,7 @@ struct UIButtonPress: ViewModifier {
             }, didEndTouch: {
                 isPressed = false
                 print("<< did end")
-            }))
+            }, action: { }))
     }
     
 }

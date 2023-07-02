@@ -12,6 +12,7 @@ struct ConsiderationCellView: View {
     let yesPercent : Double
     let name: String
     @State private var showMore = false
+    @Binding var isPressed : Bool
     
     var body: some View {
         HStack {
@@ -38,22 +39,24 @@ struct ConsiderationCellView: View {
                     .animation(.default, value: 3)
             }
             .padding(.trailing, 15)
-
+            
             
         }
-        .frame(width: 357, height: 76)
+        .frame(height: 76)
         .background(Color(red: 0.95, green: 0.95, blue: 0.96))
         .cornerRadius(16)
         .overlay(
             RoundedRectangle(cornerRadius: 16)
                 .inset(by: 1.5)
                 .stroke(Color(red: 0.77, green: 0.8, blue: 0.85), lineWidth: 3)
-    )
+        )
+        .padding(.horizontal, 15)
+        .scaleEffect(isPressed ? 0.9 : 1)
     }
 }
 
-struct ConsiderationCellView_Previews: PreviewProvider {
-    static var previews: some View {
-        ConsiderationCellView(yesPercent: 0.9, name: "some some somesome some some")
-    }
-}
+//struct ConsiderationCellView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        ConsiderationCellView(yesPercent: 0.9, name: "some some somesome some some")
+//    }
+//}

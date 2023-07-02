@@ -30,7 +30,7 @@ struct PlusButton: View {
                     .stroke(foregroundColor,
                             lineWidth: 2)
             )
-            .scaleEffect(isPressed ? 1.3 : 1)
+            .scaleEffect(isPressed ? 0.95 : 1)
             .onTapGesture(action: {
                 action()
             }, isPressed: $isPressed)

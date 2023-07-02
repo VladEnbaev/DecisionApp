@@ -41,7 +41,7 @@ struct ArgumentsView: View {
                     }
                     VStack {
                         TopNavActionView(height: 50)
-                            .padding(.top, max(0, scrollOffset.y))
+                            .padding(.top, max(0, -scrollOffset.y))
                         Spacer()
                     }
                 }
